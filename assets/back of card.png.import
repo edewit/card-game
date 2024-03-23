@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://usjxlhumks17"
-path="res://.godot/imported/stat cogs invisible.png-88ebfaeee6080dcdafcdc38ba4347fc5.ctex"
+uid="uid://cdkairya1uwyb"
+path="res://.godot/imported/back of card.png-304cd3c39013480932b8f64a09e87142.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stat cogs invisible.png"
-dest_files=["res://.godot/imported/stat cogs invisible.png-88ebfaeee6080dcdafcdc38ba4347fc5.ctex"]
+source_file="res://assets/back of card.png"
+dest_files=["res://.godot/imported/back of card.png-304cd3c39013480932b8f64a09e87142.ctex"]
 
 [params]
 
