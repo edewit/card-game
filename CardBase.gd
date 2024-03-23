@@ -1,6 +1,6 @@
 extends MarginContainer
 
-var cards := preload("res://cards-data.tres").data
+var cards := preload("res://card-data.json").data
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,7 +8,6 @@ func _ready():
 		print(card.title)
 		$MarginContainer/VBoxContainer/Label.text = card.description
 	
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
