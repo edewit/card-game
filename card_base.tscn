@@ -1,14 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dc7cd1w17blxq"]
+[gd_scene load_steps=3 format=3 uid="uid://dc7cd1w17blxq"]
 
 [ext_resource type="Script" path="res://CardBase.gd" id="1_6lgrx"]
+[ext_resource type="Texture2D" uid="uid://cfel2ydibdnvj" path="res://img/image.png" id="2_2rh77"]
 
 [node name="CardBase" type="MarginContainer"]
-offset_right = 40.0
-offset_bottom = 60.0
-pivot_offset = Vector2(20, 30)
+offset_right = 250.0
+offset_bottom = 350.0
+pivot_offset = Vector2(125, 175)
 script = ExtResource("1_6lgrx")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+texture = ExtResource("2_2rh77")
+centered = false
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -22,4 +26,5 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Super"

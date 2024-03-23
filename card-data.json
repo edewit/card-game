@@ -1,6 +1,9 @@
 [{
-	"cost": 10.0,
+	"keywords": ["What", "is", "it"],
 	"description": "Something",
+	"cost": 10.0,
 	"strength": 100.0,
-	"title": "What"
+	"defence": 10,
+	"health": 200,
+	"level": 2
 }]
