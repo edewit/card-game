@@ -1,15 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://cujgd2ydv2tit"]
+[gd_scene load_steps=5 format=3 uid="uid://cujgd2ydv2tit"]
 
 [ext_resource type="Script" path="res://play_space.gd" id="1_t5few"]
 [ext_resource type="Texture2D" uid="uid://bcyv4tct5e4iu" path="res://img/background.png" id="2_4vt2f"]
+[ext_resource type="Texture2D" uid="uid://bd6xlfs0tbh0d" path="res://assets/border card invisible.png" id="2_fqfj7"]
+[ext_resource type="Script" path="res://DeckDraw.gd" id="3_xxgvq"]
 
 [node name="PlaySpace" type="Node2D"]
 script = ExtResource("1_t5few")
 
-[node name="Cards" type="Node" parent="."]
+[node name="Deck" type="Node" parent="."]
+
+[node name="DeckDraw" type="TextureButton" parent="Deck"]
+offset_left = 800.0
+offset_top = 200.0
+offset_right = 1380.0
+offset_bottom = 1021.0
+texture_normal = ExtResource("2_fqfj7")
+script = ExtResource("3_xxgvq")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(-1, -64)
 scale = Vector2(1.49805, 1.49805)
 texture = ExtResource("2_4vt2f")
 centered = false
+
+[node name="Cards" type="Node" parent="."]

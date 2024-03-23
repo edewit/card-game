@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dc7cd1w17blxq"]
+[gd_scene load_steps=5 format=3 uid="uid://dc7cd1w17blxq"]
 
 [ext_resource type="Script" path="res://CardBase.gd" id="1_6lgrx"]
 [ext_resource type="Texture2D" uid="uid://cfel2ydibdnvj" path="res://img/image.png" id="2_2rh77"]
+[ext_resource type="Texture2D" uid="uid://bd6xlfs0tbh0d" path="res://assets/border card invisible.png" id="3_4gdor"]
+[ext_resource type="Texture2D" uid="uid://bgfof41h3tr84" path="res://assets/cost bubble invisible.png" id="4_sraip"]
 
 [node name="CardBase" type="MarginContainer"]
 offset_right = 250.0
@@ -14,19 +16,41 @@ position = Vector2(1, 1)
 texture = ExtResource("2_2rh77")
 centered = false
 
+[node name="Border" type="Sprite2D" parent="."]
+texture = ExtResource("3_4gdor")
+centered = false
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 19
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Super"
 
-[connection signal="mouse_entered" from="MarginContainer" to="." method="_on_margin_container_mouse_entered"]
+[node name="CostContainer" type="BoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="CostBackground" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/CostContainer"]
+position = Vector2(-19, -17)
+scale = Vector2(0.429577, 0.429577)
+texture = ExtResource("4_sraip")
+centered = false
+
+[node name="CostLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/CostContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "19"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
