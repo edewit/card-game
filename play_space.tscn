@@ -1,12 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://cujgd2ydv2tit"]
+[gd_scene load_steps=6 format=3 uid="uid://cujgd2ydv2tit"]
 
 [ext_resource type="Script" path="res://play_space.gd" id="1_t5few"]
 [ext_resource type="Texture2D" uid="uid://bcyv4tct5e4iu" path="res://img/background.png" id="2_4vt2f"]
 [ext_resource type="Texture2D" uid="uid://bd6xlfs0tbh0d" path="res://assets/border card invisible.png" id="2_fqfj7"]
 [ext_resource type="Script" path="res://DeckDraw.gd" id="3_xxgvq"]
 
+[sub_resource type="Curve" id="Curve_2h8oa"]
+_data = [Vector2(0, 0), 0.0, 1.0, 0, 0, Vector2(0.978873, 1), 1.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="PlaySpace" type="Node2D"]
 script = ExtResource("1_t5few")
+spread = SubResource("Curve_2h8oa")
 
 [node name="Deck" type="Node" parent="."]
 

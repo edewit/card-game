@@ -22,10 +22,7 @@ func _ready():
 
 	label.text = cards[0].description
 	cost.text = str(cards[0].cost)
-	
-	var cardSize = size
-	$Background.scale *= cardSize / $Background.texture.get_size()
-	$Border.scale *= cardSize / $Border.texture.get_size()
+
 
 func _physics_process(delta):
 	match state:

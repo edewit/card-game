@@ -10,6 +10,8 @@ var CardOffset = Vector2()
 @onready var Hor_rad = get_viewport().size.x*0.45
 @onready var Ver_rad = get_viewport().size.y*0.4
 
+@export var spread: Curve
+
 var angle = 0
 var Card_Numb = 0
 var NumberCardsHand = 0

@@ -13,10 +13,12 @@ script = ExtResource("1_6lgrx")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(1, 1)
+scale = Vector2(0.413732, 0.413732)
 texture = ExtResource("2_2rh77")
 centered = false
 
 [node name="Border" type="Sprite2D" parent="."]
+scale = Vector2(0.434483, 0.434483)
 texture = ExtResource("3_4gdor")
 centered = false
 
